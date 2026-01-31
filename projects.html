@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcus Hedlund - Projects</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects-variants.css" />
+</head>
+
+<body class="work-page work-tight-page">
+  <nav class="work-nav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Marcus Hedlund</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="work-main">
+    <div class="work-container">
+      <header class="work-header">
+        <h1>Projects</h1>
+        <p>
+          Here’s a collection of projects I’ve built—selected work across graphics, systems, and ML.
+          <span class="work-header-subline">Click a tile to open the project page.</span>
+        </p>
+      </header>
+
+      <section class="work-list" aria-label="Project list">
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="opengjk-gpu" href="#">
+            <div class="work-left">
+              <h2 class="work-title">OpenGJK-GPU</h2>
+              <p class="work-desc">CUDA implementation of GJK + EPA collision detection with warp-parallel execution and major speedups over CPU baselines.</p>
+              <div class="work-tags"><span class="tag">CUDA</span><span class="tag">C++</span><span class="tag">Collision</span><span class="tag">GPU</span><span class="tag">Performance</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/OpenGJKGPUPolytopesColliding.png" alt="OpenGJK-GPU polytopes colliding" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="cuda-path-tracer" href="#">
+            <div class="work-left">
+              <h2 class="work-title">CUDA Path Tracer</h2>
+              <p class="work-desc">Physically-based path tracer with acceleration structures, stream compaction, and support for textured glTF meshes.</p>
+              <div class="work-tags"><span class="tag">CUDA</span><span class="tag">Ray Tracing</span><span class="tag">Rendering</span><span class="tag">glTF</span><span class="tag">Performance</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/CUDAPathTracerWatch.png" alt="CUDA Path Tracer render" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="cloud-search-engine" href="#">
+            <div class="work-left">
+              <h2 class="work-title">Cloud-based Search Engine (GooseGooseGo)</h2>
+              <p class="work-desc">Distributed crawl → index → rank pipeline with performance-focused query serving and robust web data handling.</p>
+              <div class="work-tags"><span class="tag">AWS</span><span class="tag">Search</span><span class="tag">Indexing</span><span class="tag">PageRank</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/CloudBasedSearchEngineFrontend.png" alt="Cloud-based search engine frontend" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="procedural-bird-wings" href="#">
+            <div class="work-left">
+              <h2 class="work-title">Procedural Bird Wings</h2>
+              <p class="work-desc">Procedural wing generator with feather systems and texture-driven species variation.</p>
+              <div class="work-tags"><span class="tag">Houdini</span><span class="tag">Procedural</span><span class="tag">Modeling</span><span class="tag">Rendering</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/ProceduralBirdWingsRender.png" alt="Procedural bird wings render" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="webgpu-gaussian-splat" href="#">
+            <div class="work-left">
+              <h2 class="work-title">WebGPU Gaussian Splat Viewer</h2>
+              <p class="work-desc">Real-time WebGPU renderer for neural point clouds (3D Gaussian Splatting) with culling, sorting, and fast frame times.</p>
+              <div class="work-tags"><span class="tag">WebGPU</span><span class="tag">Rendering</span><span class="tag">Shaders</span><span class="tag">Realtime</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/WebGPUGaussianSplatViewer.png" alt="WebGPU Gaussian Splat Viewer" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="webgpu-forward-plus" href="#">
+            <div class="work-left">
+              <h2 class="work-title">WebGPU Forward+ & Clustered Deferred Shading</h2>
+              <p class="work-desc">Multiple lighting pipelines (Naive / Forward+ / Clustered Deferred) optimized for scenes with thousands of point lights.</p>
+              <div class="work-tags"><span class="tag">WebGPU</span><span class="tag">Lighting</span><span class="tag">Compute</span><span class="tag">Shaders</span><span class="tag">Performance</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/WebGPUForwardPlusAndClusteredDeferredShadingSponza.png" alt="WebGPU Forward+ and Clustered Deferred Sponza" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="cuda-boids" href="#">
+            <div class="work-left">
+              <h2 class="work-title">CUDA Boids Flocking Simulation</h2>
+              <p class="work-desc">Reynolds Boids at scale with spatial hashing / uniform grid optimization for massive speedups and high FPS.</p>
+              <div class="work-tags"><span class="tag">CUDA</span><span class="tag">Simulation</span><span class="tag">Spatial Grid</span><span class="tag">Performance</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/CUDABoidsFlockingSimulation10000Boids.png" alt="CUDA Boids simulation" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="cuda-stream-compaction" href="#">
+            <div class="work-left">
+              <h2 class="work-title">CUDA Stream Compaction</h2>
+              <p class="work-desc">Implemented scan variants and built stream compaction + radix sort primitives with profiling-driven optimization.</p>
+              <div class="work-tags"><span class="tag">CUDA</span><span class="tag">Scan</span><span class="tag">Parallel</span><span class="tag">Profiling</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/StreamCompactionResult.png" alt="Stream compaction result" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="mini-minecraft" href="#">
+            <div class="work-left">
+              <h2 class="work-title">Mini Minecraft — 3D World Engine</h2>
+              <p class="work-desc">Chunk-based voxel engine with multithreaded procedural generation, shader effects, and tooling for voxelization/editing.</p>
+              <div class="work-tags"><span class="tag">OpenGL</span><span class="tag">C++</span><span class="tag">Rendering</span><span class="tag">Procedural</span><span class="tag">Systems</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/MiniMinecraft3DWorldEngine.png" alt="Mini Minecraft 3D world engine" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="multi-agent-playground" href="#">
+            <div class="work-left">
+              <h2 class="work-title">Multi-Agent Playground</h2>
+              <p class="work-desc">LLM-powered agent simulation with action schemas, robust state management, and real-time visualization tools.</p>
+              <div class="work-tags"><span class="tag">Agents</span><span class="tag">FastAPI</span><span class="tag">Godot</span><span class="tag">LLM</span><span class="tag">Simulation</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/MultiAgentPlaygroundDemo.gif" alt="Multi-Agent Playground demo" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="ese3060-cifar-nanogpt" href="#">
+            <div class="work-left">
+              <h2 class="work-title">ESE 3060: CIFAR-10 & NanoGPT Optimization</h2>
+              <p class="work-desc">Speed/accuracy optimization experiments plus distributed NanoGPT work and rigorous statistical benchmarking.</p>
+              <div class="work-tags"><span class="tag">PyTorch</span><span class="tag">Deep Learning</span><span class="tag">Distributed</span><span class="tag">Stats</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/CIFAR10andNanoGPTOptimization.png" alt="CIFAR-10 and NanoGPT optimization" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="3d-stylization" href="#">
+            <div class="work-left">
+              <h2 class="work-title">3D Stylization</h2>
+              <p class="work-desc">Toon shader + rim lighting and post-process outlines (depth/normals) with interactive effects.</p>
+              <div class="work-tags"><span class="tag">Unity</span><span class="tag">HLSL</span><span class="tag">Toon</span><span class="tag">Post-process</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/3DStylizationOddish.png" alt="3D stylization scene" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="pennos" href="#">
+            <div class="work-left">
+              <h2 class="work-title">PennOS — UNIX-like Operating System</h2>
+              <p class="work-desc">FAT-style file system, modular abstractions, and subsystem integration with careful concurrency debugging.</p>
+              <div class="work-tags"><span class="tag">C</span><span class="tag">OS</span><span class="tag">File System</span><span class="tag">Concurrency</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/PennOSUNIXLikeOperatingSystem.png" alt="PennOS UNIX-like operating system" loading="lazy" />
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card">
+          <a class="work-card-inner" data-project="music-exploration" href="#">
+            <div class="work-left">
+              <h2 class="work-title">Music Exploration Web Application</h2>
+              <p class="work-desc">Full-stack music analytics app with dataset integration, feature visualization, and recommendation-oriented exploration.</p>
+              <div class="work-tags"><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Full-stack</span><span class="tag">Data Viz</span></div>
+            </div>
+            <div class="work-right">
+              <img src="Images/MusicExplorationWebApplicationFrontend.png" alt="Music exploration web app frontend" loading="lazy" />
+            </div>
+          </a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <script src="project-links.js"></script>
+</body>
+</html>

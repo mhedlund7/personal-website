@@ -1,0 +1,317 @@
+/* -----------------------------
+   Shared helpers
+------------------------------ */
+.tiles-page .nav-links a.active::after,
+.work-page .nav-links a.active::after {
+  background-color: var(--color-accent-1);
+}
+
+/* -----------------------------
+   TILES PAGE (dark, image tiles)
+------------------------------ */
+.tiles-page {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.tiles-main {
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.tiles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tiles-header h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+  color: var(--color-light);
+}
+
+.tiles-header p {
+  color: var(--color-light);
+  opacity: 0.8;
+  max-width: 70ch;
+  margin-bottom: 2rem;
+}
+
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+
+.tile {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  display: block;
+  min-height: 240px;
+  text-decoration: none;
+  transform: translateZ(0);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+.tile--hero {
+  grid-column: span 12;
+  min-height: 320px;
+}
+
+.tile--half {
+  grid-column: span 6;
+  min-height: 240px;
+}
+
+@media (max-width: 900px) {
+  .tile--half {
+    grid-column: span 12;
+  }
+}
+
+.tile-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.02) contrast(1.05);
+  transform: scale(1.02);
+}
+
+.tile-overlay {
+  position: absolute;
+  inset: 0;
+  /* Remove vignette/darkening effect so images are fully bright */
+  background: none;
+}
+
+.tile-content {
+  position: absolute;
+  left: 28px;
+  bottom: 26px;
+  right: 28px;
+}
+
+.tile-title {
+  color: var(--color-light);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tile-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.tile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
+  background: rgba(154, 225, 157, 0.15);
+  border: 1px solid rgba(154, 225, 157, 0.4);
+  color: var(--color-accent-1);
+  font-size: 0.85rem;
+  font-weight: 650;
+  backdrop-filter: blur(6px);
+}
+
+.tile-linkhint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent-1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0.0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.tile:hover .tile-linkhint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tile:hover {
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.60);
+}
+
+.tile:hover .tile-bg {
+  transform: scale(1.05);
+  transition: transform 320ms ease;
+}
+
+/* -----------------------------
+   WORK PAGE (dark theme, list cards)
+------------------------------ */
+.work-page {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.work-page nav {
+  background: var(--color-dark);
+  border-bottom: 1px solid var(--color-mid);
+  opacity: 0.3;
+}
+
+.work-page .logo,
+.work-page .nav-links a {
+  color: var(--color-light);
+}
+
+.work-page .nav-links a:hover,
+.work-page .nav-links a.active {
+  color: var(--color-accent-1);
+}
+
+.work-main {
+  padding: 3rem 1.25rem 4rem;
+}
+
+.work-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.work-header h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--color-light);
+}
+
+.work-header p {
+  color: var(--color-light);
+  opacity: 0.8;
+  max-width: 75ch;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+
+.work-list {
+  display: grid;
+  gap: 18px;
+}
+
+.work-card {
+  border: 1px solid var(--color-mid);
+  background: var(--color-mid);
+  opacity: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.work-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 22px;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .work-card-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-date {
+  color: var(--color-light);
+  opacity: 0.7;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.work-title {
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  color: var(--color-light);
+}
+
+.work-roles {
+  color: var(--color-light);
+  opacity: 0.7;
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+
+.work-desc {
+  color: var(--color-light);
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(154, 225, 157, 0.2);
+  color: var(--color-accent-1);
+  border: 1px solid rgba(154, 225, 157, 0.4);
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+
+/* Force accent-green tag styling even if a page overrides .tag */
+.tag--accent {
+  background: rgba(154, 225, 157, 0.2);
+  color: var(--color-accent-1);
+  border: 1px solid rgba(154, 225, 157, 0.4);
+}
+
+.work-card:hover {
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.6);
+  border-color: var(--color-accent-1);
+  transform: translateY(-1px);
+  transition: box-shadow 140ms ease, transform 140ms ease, border-color 140ms ease;
+}
+
+.work-right {
+  width: 100%;
+  max-width: 360px;
+}
+
+.work-right img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--color-mid);
+  opacity: 1;
+}
+
+@media (max-width: 950px) {
+  .work-right {
+    max-width: 100%;
+  }
+  .work-right img {
+    height: 220px;
+  }
+}
