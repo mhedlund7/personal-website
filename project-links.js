@@ -7,7 +7,7 @@ const PROJECT_LINKS = {
     "webgpu-forward-plus": "https://github.com/mhedlund7/Project4-WebGPU-Forward-Plus-and-Clustered-Deferred",
     "cuda-boids": "https://github.com/mhedlund7/Project1-CUDA-Flocking",
     "cuda-stream-compaction": "https://github.com/mhedlund7/Project2-Stream-Compaction",
-    "mini-minecraft": "https://youtu.be/ziJLuOOT-1g?si=77T9mmrtZixQUJ2t",
+    "mini-minecraft": "",
     "multi-agent-playground": "https://github.com/MoodyMarshmallow/multi_agent_playground",
     "ese3060-cifar-nanogpt": "https://github.com/mhedlund7/ese-3060-project",
     "3d-stylization": "https://github.com/mhedlund7/hw02-stylization",
