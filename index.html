@@ -3,16 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Hedlund - About</title>
+    <title>Marcus Hedlund | About</title>
     <base href="./">
+    <!-- SEO -->
+    <link rel="canonical" href="https://marcushedlund.com/">
+    <meta name="description" content="Marcus Hedlund — computer science student at the University of Pennsylvania. Portfolio featuring projects in GPU programming, graphics, and ML systems.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0b0b0b">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marcus Hedlund">
+    <meta property="og:title" content="Marcus Hedlund | About">
+    <meta property="og:description" content="Marcus Hedlund — computer science student at the University of Pennsylvania. Portfolio featuring projects in GPU programming, graphics, and ML systems.">
+    <meta property="og:url" content="https://marcushedlund.com/">
+    <meta property="og:image" content="https://marcushedlund.com/Images/profile.JPG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marcus Hedlund | About">
+    <meta name="twitter:description" content="Marcus Hedlund — computer science student at the University of Pennsylvania. Portfolio featuring projects in GPU programming, graphics, and ML systems.">
+    <meta name="twitter:image" content="https://marcushedlund.com/Images/profile.JPG">
+
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marcus Hedlund",
+  "url": "https://marcushedlund.com/",
+  "image": "https://marcushedlund.com/Images/profile.JPG",
+  "email": "mailto:marcushedlund.mhh@gmail.com",
+  "sameAs": [
+    "https://github.com/mhedlund7",
+    "https://linkedin.com/in/marcushedlund"
+  ],
+  "affiliation": {
+    "@type": "Organization",
+    "name": "University of Pennsylvania",
+    "url": "https://www.upenn.edu/"
+  },
+  "knowsAbout": [
+    "GPU programming",
+    "Computer graphics",
+    "Procedural graphics",
+    "Machine learning",
+    "Systems programming"
+  ]
+}
+    </script>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">Marcus Hedlund</a>
-            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
-            <ul class="nav-links" id="primary-nav">
+            <ul class="nav-links">
                 <li><a href="index.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
 	                <li><a href="resume.html">Resume</a></li>
@@ -63,6 +109,5 @@
             <p>&copy; 2025 Marcus Hedlund. All rights reserved.</p>
         </div>
     </footer>
-  <script src="nav.js"></script>
 </body>
 </html>
