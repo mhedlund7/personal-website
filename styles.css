@@ -2,12 +2,12 @@
    Color Palette
 ========================================================= */
 :root {
-    --color-dark: #2C302E;
-    --color-mid: #474A48;
-    --color-light: #909590;
-    --color-accent-1: #9AE19D;
-    --color-accent-2: #537A5A;
-  }
+  --color-dark: #2C302E;
+  --color-mid: #474A48;
+  --color-light: #909590;
+  --color-accent-1: #9AE19D;
+  --color-accent-2: #537A5A;
+}
   
   /* =========================================================
      Reset and Base Styles
@@ -25,12 +25,19 @@
     background-color: var(--color-dark);
   }
   
-  .container {
+  .container,
+  .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
-  
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   /* =========================================================
      Navigation (Shared)
   ========================================================= */
@@ -40,17 +47,8 @@
     position: sticky;
     top: 0;
     z-index: 9999;
-    opacity: 1;     /* ensure never dimmed */
+    opacity: 1;
     filter: none;
-  }
-  
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   
   .logo {
@@ -182,7 +180,6 @@
     text-align: center;
   }
   
-  /* Simple About Layout (Version 1) */
   .about-simple {
     padding: 3rem 2rem;
     max-width: 800px;
@@ -310,23 +307,6 @@
     justify-content: center;
     font-size: 3rem;
     color: var(--color-dark);
-  }
-  
-  @media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
-      text-align: center;
-      gap: 2rem;
-    }
-  
-    .profile-picture-wrapper {
-      width: 250px;
-      height: 250px;
-    }
-  
-    .greeting-section h1 {
-      font-size: 2.5rem;
-    }
   }
   
   .about-content {
@@ -489,21 +469,6 @@
   .about-right strong {
     color: var(--color-accent-1);
     font-weight: 600;
-  }
-  
-  @media (max-width: 768px) {
-    .about-split .container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  
-    .about-left { order: 2; }
-    .about-right { order: 1; }
-  
-    .side-nav {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
   }
   
   /* =========================================================
@@ -741,11 +706,6 @@
   /* =========================================================
      TILES PAGE (dark, image tiles)
   ========================================================= */
-  .tiles-page {
-    background: var(--color-dark);
-    color: var(--color-light);
-  }
-  
   .tiles-main {
     padding: 2.5rem 1.25rem 4rem;
   }
@@ -815,7 +775,7 @@
   .tile-overlay {
     position: absolute;
     inset: 0;
-    background: none; /* no vignette/darkening */
+    background: none;
   }
   
   .tile-content {
@@ -885,11 +845,6 @@
   /* =========================================================
      WORK PAGE (dark theme, list cards)
   ========================================================= */
-  .work-page {
-    background: var(--color-dark);
-    color: var(--color-light);
-  }
-  
   .work-main {
     padding: 3rem 1.25rem 4rem;
   }
@@ -913,7 +868,12 @@
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
   }
-  
+
+  .work-header-subline {
+    display: block;
+    margin-top: 0.35rem;
+  }
+
   .work-list {
     display: grid;
     gap: 18px;
@@ -922,7 +882,6 @@
   .work-card {
     border: 1px solid var(--color-mid);
     background: var(--color-mid);
-    opacity: 1;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
@@ -937,12 +896,6 @@
     color: inherit;
     padding: 22px;
     align-items: center;
-  }
-  
-  @media (max-width: 950px) {
-    .work-card-inner {
-      grid-template-columns: 1fr;
-    }
   }
   
   .work-date {
@@ -979,23 +932,20 @@
     gap: 10px;
   }
   
+  .tag,
+  .tag--accent {
+    background: rgba(154, 225, 157, 0.2);
+    color: var(--color-accent-1);
+    border: 1px solid rgba(154, 225, 157, 0.4);
+  }
+
   .tag {
     display: inline-flex;
     align-items: center;
     padding: 6px 12px;
     border-radius: 999px;
-    background: rgba(154, 225, 157, 0.2);
-    color: var(--color-accent-1);
-    border: 1px solid rgba(154, 225, 157, 0.4);
     font-weight: 650;
     font-size: 0.9rem;
-  }
-  
-  /* Force accent-green tag styling even if a page overrides .tag */
-  .tag--accent {
-    background: rgba(154, 225, 157, 0.2);
-    color: var(--color-accent-1);
-    border: 1px solid rgba(154, 225, 157, 0.4);
   }
   
   .work-card:hover {
@@ -1017,10 +967,15 @@
     display: block;
     border-radius: 14px;
     border: 1px solid var(--color-mid);
-    opacity: 1;
   }
   
+  /* =========================================================
+     Responsive Design
+  ========================================================= */
   @media (max-width: 950px) {
+    .work-card-inner {
+      grid-template-columns: 1fr;
+    }
     .work-right {
       max-width: 100%;
     }
@@ -1028,31 +983,47 @@
       height: 220px;
     }
   }
-  
-  /* =========================================================
-     Responsive Design (general)
-  ========================================================= */
+
   @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
     .subtitle { font-size: 1rem; }
-  
+
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+    .profile-picture-wrapper {
+      width: 250px;
+      height: 250px;
+    }
+    .greeting-section h1 {
+      font-size: 2.5rem;
+    }
+
+    .about-split .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .about-left { order: 2; }
+    .about-right { order: 1; }
+    .side-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     .nav-links {
       gap: 1rem;
       font-size: 0.9rem;
     }
-  
     .content-grid { grid-template-columns: 1fr; }
-  
     .project-header {
       flex-direction: column;
       align-items: flex-start;
     }
-  
     .project-header .date { margin-left: 0; }
-  
     .resume-item-header {
       flex-direction: column;
       align-items: flex-start;
     }
   }
-  
