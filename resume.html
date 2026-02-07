@@ -7,7 +7,7 @@
   <base href="./">
     <!-- SEO -->
     <link rel="canonical" href="https://marcushedlund.com/resume.html">
-    <meta name="description" content="Resume page for Marcus Hedlund. Currently updating—check back soon. Contact links included.">
+    <meta name="description" content="Resume for Marcus Hedlund (PDF).">
     <meta name="robots" content="index,follow">
     <meta name="theme-color" content="#0b0b0b">
 
@@ -15,14 +15,14 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Marcus Hedlund">
     <meta property="og:title" content="Marcus Hedlund | Resume">
-    <meta property="og:description" content="Resume page for Marcus Hedlund. Currently updating—check back soon. Contact links included.">
+    <meta property="og:description" content="Resume for Marcus Hedlund (PDF).">
     <meta property="og:url" content="https://marcushedlund.com/resume.html">
     <meta property="og:image" content="https://marcushedlund.com/Images/profile.JPG">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Marcus Hedlund | Resume">
-    <meta name="twitter:description" content="Resume page for Marcus Hedlund. Currently updating—check back soon. Contact links included.">
+    <meta name="twitter:description" content="Resume for Marcus Hedlund (PDF).">
     <meta name="twitter:image" content="https://marcushedlund.com/Images/profile.JPG">
 
   <link rel="stylesheet" href="styles.css" />
@@ -35,7 +35,7 @@
       <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="Resume.pdf" target="_blank" rel="noopener" class="active">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -45,21 +45,19 @@
       <header class="work-header">
         <h1>Resume</h1>
         <p>
-          I'm currently updating my resume. Please check back soon.
+          <a href="Resume.pdf" target="_blank" rel="noopener">Open my resume (PDF)</a>
         </p>
       </header>
 
-      <section class="work-list" aria-label="Resume status">
+      <section class="work-list" aria-label="Resume PDF">
         <article class="work-card">
           <div class="work-card-inner" style="cursor: default;">
             <div class="work-left">
-              <h2 class="work-title">Coming soon</h2>
-              <p class="work-desc">
-                I’m actively revising my resume and will post the latest version here once it’s ready.
-              </p>
+              <h2 class="work-title">Resume.pdf</h2>
+              <p class="work-desc">View or download the latest version.</p>
               <div class="work-tags">
-                <span class="tag tag--accent">In progress</span>
-                <span class="tag tag--accent">Updated soon</span>
+                <span class="tag tag--accent">PDF</span>
+                <span class="tag tag--accent">Updated</span>
               </div>
             </div>
             <div class="work-right" aria-hidden="true">
@@ -70,6 +68,14 @@
           </div>
         </article>
       </section>
+
+      <div style="margin-top: 1rem; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+        <iframe
+          src="Resume.pdf"
+          title="Resume PDF"
+          style="width: 100%; height: min(80vh, 1000px); border: 0; background: #0b0b0b;"
+        ></iframe>
+      </div>
     </div>
   </main>
 </body>
