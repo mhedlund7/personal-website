@@ -1,4 +1,4 @@
-// Mobile nav toggle (used on all pages)
+// Mobile nav toggle
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("primary-nav");
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") setOpen(false);
   });
 
-  // If the user rotates / resizes to desktop, ensure menu isn't stuck open
   window.addEventListener("resize", () => {
     if (window.matchMedia("(min-width: 641px)").matches) setOpen(false);
   });

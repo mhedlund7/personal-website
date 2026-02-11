@@ -1,3 +1,3 @@
 # Personal Website
 
-Personal website for Marcus Hedlund, deployed via GitHub Pages.
+Personal website for Marcus Hedlund, deployed at MarcusHedlund.com.

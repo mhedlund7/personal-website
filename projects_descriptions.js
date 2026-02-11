@@ -3,7 +3,7 @@
 
 const PROJECT_DESCRIPTIONS = {
   "opengjk-gpu":
-    "CUDA implementation of GJK + EPA collision detection with warp-parallel execution and major speedups over CPU baselines.",
+    "CUDA implementation of GJK + EPA collision detection with warp-parallel execution and 37x speedups over CPU baselines.",
   "cuda-path-tracer":
     "Physically-based path tracer with acceleration structures, stream compaction, and support for textured glTF meshes.",
   "cloud-search-engine":
